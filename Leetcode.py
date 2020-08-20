@@ -12,3 +12,14 @@
         for i in indices:
             finalans = finalans + ans[i]
         return finalans
+
+
+    # 1351. Count Negative Numbers in a Sorted Matrix || Solution Performance - Memory: 45.97% ||  Runtime: 88.62%
+
+    def countNegatives(self, grid: List[List[int]]) -> int:
+        count = 0
+        for arr in grid:
+            for num in arr:
+                if num<0:
+                    count+=1
+        return count
