@@ -24,3 +24,16 @@ def countNegatives(self, grid: List[List[int]]) -> int:
             if num<0:
                 count+=1
     return count
+
+
+def minSteps(self, s: str, t: str) -> int:
+    if (s == "") or (t == ""):
+        return 0
+    count = 0
+    for i in range(0,len(s)):
+        if s[i] in t:
+            newT = t.replace(s[i],'',1)
+            t = newT 
+        else:
+            count+=1
+    return len(t)
