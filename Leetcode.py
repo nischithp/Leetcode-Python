@@ -50,3 +50,14 @@ def hammingDistance(self, x: int, y: int) -> int:
         if newX[i] != newY[i]:
             count+=1
     return count
+
+# 905. Sort Array By Parity || Solution Performance - Memory: 94.53% (14.2MB) ||  Runtime: 34.32% (120ms)
+def sortArrayByParity(self, A: List[int]) -> List[int]:
+        odd = []
+        even = []
+        for i in A:
+            if i % 2 == 0:
+                even.append(i)
+            else:
+                odd.append(i)
+        return (even+odd)
