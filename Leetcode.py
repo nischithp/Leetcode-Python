@@ -38,3 +38,15 @@ def minSteps(self, s: str, t: str) -> int:
         else:
             count+=1
     return len(t)
+
+# 461. Hamming Distance || Solution Performance - Memory: 97.74% (13.6MB) ||  Runtime: 89.96% (28ms)
+def hammingDistance(self, x: int, y: int) -> int:
+    newX = "{0:032b}".format(x)
+    newY = "{0:032b}".format(y)
+
+    count = 0
+
+    for i in range(0,len(newX)):
+        if newX[i] != newY[i]:
+            count+=1
+    return count
