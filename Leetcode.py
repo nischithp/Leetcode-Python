@@ -70,7 +70,7 @@ def replaceElements(self, arr: List[int]) -> List[int]:
     arr[-1] = -1
     return arr
 
-# 1374. Generate a String With Characters That Have Odd Counts Runtime: 28 ms, faster than 80.76% of Python3 online submissions for Generate a String With Characters That Have Odd Counts.
+# 1374. Generate a String With Characters That Have Odd Counts ||Runtime: 28 ms, faster than 80.76% of Python3 online submissions for Generate a String With Characters That Have Odd Counts.
 # Memory Usage: 13.6 MB, less than 99.65%
 def generateTheString(self, n: int) -> str:
     
