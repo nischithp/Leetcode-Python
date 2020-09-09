@@ -61,3 +61,11 @@ def sortArrayByParity(self, A: List[int]) -> List[int]:
             else:
                 odd.append(i)
         return (even+odd)
+
+# 1299. Replace Elements with Greatest Element on Right Side Runtime: 4648 ms, faster than 27.96% || Memory Usage: 14.7 MB, less than 86.04%
+Memory Usage: 14.7 MB, less than 86.04% of Python3 online submissions for Replace Elements with Greatest Element on Right Side.
+def replaceElements(self, arr: List[int]) -> List[int]:
+    for i in range(0,len(arr)-1):
+        arr[i] = max(arr[i+1:len(arr)])
+    arr[-1] = -1
+    return arr
