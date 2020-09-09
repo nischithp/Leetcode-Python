@@ -63,9 +63,23 @@ def sortArrayByParity(self, A: List[int]) -> List[int]:
         return (even+odd)
 
 # 1299. Replace Elements with Greatest Element on Right Side Runtime: 4648 ms, faster than 27.96% || Memory Usage: 14.7 MB, less than 86.04%
-Memory Usage: 14.7 MB, less than 86.04% of Python3 online submissions for Replace Elements with Greatest Element on Right Side.
+
 def replaceElements(self, arr: List[int]) -> List[int]:
     for i in range(0,len(arr)-1):
         arr[i] = max(arr[i+1:len(arr)])
     arr[-1] = -1
     return arr
+
+# 1374. Generate a String With Characters That Have Odd Counts Runtime: 28 ms, faster than 80.76% of Python3 online submissions for Generate a String With Characters That Have Odd Counts.
+# Memory Usage: 13.6 MB, less than 99.65%
+def generateTheString(self, n: int) -> str:
+    
+    ans = ""
+    if(n %2 == 0):
+        for i in range(0,n-1):
+            ans = ans + "a"
+        ans = ans + "b"
+    else:
+        for i in range(0,n):
+            ans = ans + "a"
+    return ans
