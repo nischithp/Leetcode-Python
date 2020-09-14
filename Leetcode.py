@@ -83,3 +83,18 @@ def generateTheString(self, n: int) -> str:
         for i in range(0,n):
             ans = ans + "a"
     return ans
+
+# 442. Find All Duplicates in an Array
+# Runtime: 380 ms, faster than 81.54% of Python3 online submissions for Find All Duplicates in an Array.
+# Memory Usage: 20.9 MB, less than 90.39% of Python3 online submissions for Find All Duplicates in an Array.
+def findDuplicates(self, nums: List[int]) -> List[int]:
+    nums.sort()
+    ans = []
+    if len(nums) == 0:
+        return ans
+    prev = nums[0]
+    for i in range(1,len(nums)): 
+        if prev == nums[i]:
+            ans.append(nums[i])
+        prev = nums[i]
+    return ans
