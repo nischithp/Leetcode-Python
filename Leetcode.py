@@ -1,3 +1,13 @@
+# 237. Delete Node in a Linked List
+def deleteNode(self, node):
+        """
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        """
+        node.val = node.next.val
+        node.next = node.next.next
+            
+
 
 # 1528. Shuffle String || Solution Performance - Memory: 85.02% ||  Runtime: 75.29%
 
