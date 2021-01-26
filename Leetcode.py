@@ -6,8 +6,19 @@ def deleteNode(self, node):
         """
         node.val = node.next.val
         node.next = node.next.next
-            
 
+# 141. Linked List Cycle
+
+def hasCycle(self, head: ListNode) -> bool:
+    visited = []
+    while(head != None):
+        if(head not in visited):
+            print(head.val)
+            visited.append(head)
+            head = head.next
+        else:
+            return True
+    return False
 
 # 1528. Shuffle String || Solution Performance - Memory: 85.02% ||  Runtime: 75.29%
 
